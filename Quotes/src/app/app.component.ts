@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  quote ='The pessimist sees diffuculty in every opportunity'
+  quotes:string[];
+  constructor(){
+    this.quotes=['The pessimist sees difficuly in every opportunity','Dont let yesterday take up too much today','You learn more from failure than from success']
+  }
 }
