@@ -7,8 +7,9 @@ import {Quote} from './quote';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  quotes:string[];
-  constructor(){
-    this.quotes=['The pessimist sees difficuly in every opportunity','Dont let yesterday take up too much today','You learn more from failure than from success']
-  }
+  quotes:Quote[]=[
+    {id:1, name:'The pessimist sees difficuly in every opportunity'},
+    {id:2, name:'Dont let yesterday take up too much today'},
+    {id:3, name:'You learn more from failure than from success'},
+  ];
 }
