@@ -7,9 +7,9 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
-    {id:1, name:'The pessimist sees difficuly in every opportunity',description:"terrible"},
-    {id:2, name:'Dont let yesterday take up too much today',description:'inspirational'},
-    {id:3, name:'You learn more from failure than from success',description:'terrible'},
+    new Quote(1,'The pessimist sees difficuly in every opportunity','terrible'),
+    new Quote(2,'Dont let yesterday take up too much today','inspirational'),
+    new Quote(3,'You learn more from failure than from success','terrible'),
   ];
 
 
