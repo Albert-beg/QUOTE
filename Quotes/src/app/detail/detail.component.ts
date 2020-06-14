@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output ,EventEmitter} from '@angular/core';
 import { Quote} from '../quote';
 @Component({
   selector: 'app-detail',
@@ -6,7 +6,12 @@ import { Quote} from '../quote';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-   @Input() quote:Quote;
+   @Input() quote: Quote;
+   @Output() isComplete = new EventEmitter<boolean>();
+
+   quoteComplete(Complete:boolean){
+    this.isComplete.emit(Complete);
+   }
  
   constructor() { }
 

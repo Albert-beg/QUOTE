@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Quote } from '../quote';
+import { EventEmitter } from 'protractor';
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
@@ -11,9 +12,14 @@ export class QuoteComponent implements OnInit {
     new Quote(2,'Dont let yesterday take up too much today','inspirational'),
     new Quote(3,'You learn more from failure than from success','terrible'),
   ];
-    toggleDetails(index){
-      this.quotes[index].showDescription= !this.quotes[index].showDescription;
+  completeQuote(isComplete,index){
+    if (isComplete) {
+      this.quotes.splice(index)
+     }
     }
+    toggleDetails(index){
+      this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit() {

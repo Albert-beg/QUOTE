@@ -1,9 +1,9 @@
 <h1> My QUotes</h1>
 <hr>
 <ul>
-  <div *ngFor='let quote of quotes ; let i=index'>
+  <div *ngFor='let quote of quotes;let i=index'>
     <li>{{quote.name}}</li>
     <button (click)='toggleDetails(i)'>Toggle Details</button>
-    <app-detail *ngIf='quote.showdescription' [quote]='quote'></app-detail>
+    <app-detail *ngIf='quote.ShowDescription' [quote]='quote'(isComplete) ='completeQuote($event,i)'></app-detail>
   </div>
 </ul>
