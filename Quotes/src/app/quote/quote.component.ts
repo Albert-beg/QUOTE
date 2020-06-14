@@ -11,11 +11,12 @@ export class QuoteComponent implements OnInit {
     new Quote(2,'Dont let yesterday take up too much today','inspirational'),
     new Quote(3,'You learn more from failure than from success','terrible'),
   ];
-
-
+    toggleDetails(index){
+      this.quotes[index].showDescription= !this.quotes[index].showDescription;
+    }
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

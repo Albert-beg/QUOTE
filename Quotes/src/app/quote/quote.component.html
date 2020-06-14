@@ -1,9 +1,9 @@
-<div>
-  <h1>My Quotes</h1>
-  <ul>
-    <li *ngFor='let quote of quotes'>
-      {{quote.name}}
-      <app-detail [quote]='quote'></app-detail>
-    </li>
-  </ul>
-</div>
+<h1> My QUotes</h1>
+<hr>
+<ul>
+  <div *ngFor='let quote of quotes ; let i=index'>
+    <li>{{quote.name}}</li>
+    <button (click)='toggleDetails(i)'>Toggle Details</button>
+    <app-detail *ngIf='quote.showdescription' [quote]='quote'></app-detail>
+  </div>
+</ul>
