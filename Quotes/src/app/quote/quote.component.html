@@ -2,7 +2,7 @@
 <hr>
 <ul>
   <div *ngFor='let quote of quotes;let i=index'>
-    <li>{{quote.name}}</li>
+    <li appStrikethrough>{{quote.name}} due on {{quote.completeDate}}/li>
     <button (click)='toggleDetails(i)'>Toggle Details</button>
     <app-detail *ngIf='quote.ShowDescription' [quote]='quote'(isComplete) ='completeQuote($event,i)'></app-detail>
   </div>

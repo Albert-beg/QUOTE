@@ -8,9 +8,9 @@ import { EventEmitter } from 'protractor';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
-    new Quote(1,'The pessimist sees difficuly in every opportunity','terrible'),
-    new Quote(2,'Dont let yesterday take up too much today','inspirational'),
-    new Quote(3,'You learn more from failure than from success','terrible'),
+    new Quote(1,'The pessimist sees difficuly in every opportunity','terrible',new Date(2020,3,14)),
+    new Quote(2,'Dont let yesterday take up too much today','inspirational',new Date(2019,6,9)),
+    new Quote(3,'You learn more from failure than from success','terrible',new Date(2022,1,12)),
   ];
   completeQuote(isComplete,index){
     if (isComplete) {
