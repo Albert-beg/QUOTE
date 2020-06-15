@@ -4,6 +4,6 @@
   <div *ngFor='let quote of quotes;let i=index'>
     <li appStrikethrough>{{quote.name}} due on {{quote.completeDate}}/li>
     <button (click)='toggleDetails(i)'>Toggle Details</button>
-    <app-detail *ngIf='quote.ShowDescription' [quote]='quote'(isComplete) ='completeQuote($event,i)'></app-detail>
+    <app-detail *ngIf='quote.ShowDescription' [quote]='quote'(isComplete) ='deleteQuote($event,i)'></app-detail>
   </div>
 </ul>
