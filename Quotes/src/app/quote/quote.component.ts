@@ -12,9 +12,13 @@ export class QuoteComponent implements OnInit {
     new Quote(2,'Dont let yesterday take up too much today','inspirational',new Date(2019,6,9)),
     new Quote(3,'You learn more from failure than from success','terrible',new Date(2022,1,12)),
   ];
-  completeQuote(isComplete,index){
+  deleteQuote(isComplete, index){
     if (isComplete) {
-      this.quotes.splice(index)
+      let toDelete = confirm (`Are you sure you want to delete ${this.quotes[index].name}?`)
+
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
      }
     }
     toggleDetails(index){
