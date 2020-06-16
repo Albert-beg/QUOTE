@@ -24,6 +24,12 @@ export class QuoteComponent implements OnInit {
     toggleDetails(index){
       this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
+  addNewGoal(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.completeDate = new Date(quote.complete)
+    this.quotes.push(quote)
+  }
   constructor() { }
 
   ngOnInit() {
